@@ -12,14 +12,42 @@
         <a href="contact.html">Contact</a>
       </nav>
     </header>
-
-    <!-- List and form -->
+    <main role="main">
+      <section>
+        <h2>Get In Touch</h2>
+        <p>Feel free to reach out to me to connect over an opportunity, talk shop, or just to network!</p>
+      </seciton>
+      <section>
+        <ul>
+          <li><a href="mailto:adnama.lin@gmail.com">adnama.lin@gmail.com</a></li>
+          <li><a href="tel:330-123-4567">330.123.4567</a></li></li>
+          <li class="twitter"><a href="twitter.com/adnama.lin">@adnama.lin</a></li>
+        </ul>
+      </section>
+        <form name="contactform" action="form-to-email.php" method="post">
+          <div>
+            <label>Full Name:</label>
+            <input type="text" name="name">
+          </div>
+          <div>
+            <label>Your Email:</label>
+            <input type="email" name="email">
+          </div>
+          <div>
+            <label>Message</label>
+            <textarea name="message" rows: 15 cols: 50></textarea>
+          </div>
+          <button type="submit">submit!</button>
+        </form>
+      <section>
+      </section>
+    </main>
 
     <footer>
       <a href="https://github.com/adnamalin"><img src="../images/githubicon.png" alt="github icon"></a>
-      <a href="https://www.linkedin.com/in/adnamalin"><img src="../linkedinicon.png" alt="linkedin icon icon"></a>
-      <a href="https://www.instagram.com/adnama.lin/"><img src="../instagramicon.png" alt="instagram icon"></a>
-      <a href="https://www.facebook.com/adnama.lin"><img src="../facebookicon.png" alt="facebook icon"></a>
+      <a href="https://www.linkedin.com/in/adnamalin"><img src="../images/linkedinicon.png" alt="linkedin icon icon"></a>
+      <a href="https://www.instagram.com/adnama.lin/"><img src="../images/instagramicon.png" alt="instagram icon"></a>
+      <a href="https://www.facebook.com/adnama.lin"><img src="../images/facebookicon.png" alt="facebook icon"></a>
     </footer>
   </body>
 </html>
