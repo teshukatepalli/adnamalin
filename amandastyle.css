@@ -1,0 +1,27 @@
+/*General Styles*/
+
+body {
+  font-family: 'raleway', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*Heading Area*/
+
+header {
+  background-color: lightblue;
+}
+
+nav {
+  text-align: center;
+  padding: 20 0 20;
+  margin: 20 0 0;
+}
+
+.mainimage {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
