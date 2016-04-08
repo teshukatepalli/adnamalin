@@ -142,7 +142,10 @@ footer {
 
 .profilepic {
   border-radius: 100%;
-  max-width: 30%;
+  max-width: 150px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
 }
 
 /**********Contact Page***********/
