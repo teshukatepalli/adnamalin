@@ -3,52 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title>Contact Amanda</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="amandastyle.css">
   </head>
-  <body>
-    <header>
+
+  <body class="subpagebg">
+    <header id="sidenav">
       <nav>
         <a href="index.html">Home</a> |
         <a href="about.html">About</a> |
         <a href="contact.html">Contact</a>
       </nav>
     </header>
-    <main role="main">
-      <section>
-        <h2>Get In Touch</h2>
-        <p>Feel free to reach out to me to connect over an opportunity, talk shop, or just to network!</p>
-      </seciton>
-      <section>
-        <ul>
-          <li><a href="mailto:adnama.lin@gmail.com">adnama.lin@gmail.com</a></li>
-          <li><a href="tel:330-123-4567">330.123.4567</a></li></li>
-          <li class="twitter"><a href="twitter.com/adnama.lin">@adnama.lin</a></li>
-        </ul>
-      </section>
+    <main id="contactmain" role="main">
+      <h1 class="subpagetitle">Get In Touch</h1>
+      <article>
+        <section>
+          <p>Feel free to reach out to me to connect over an opportunity, talk shop, or just to network!</p>
+        </seciton>
+        <section>
+          <ul>
+            <li><a href="mailto:adnama.lin@gmail.com">adnama.lin@gmail.com</a></li> &middot;
+            <li><a href="tel:330-123-4567">330.123.4567</a></li>
+            &middot;
+            <li class="twitter"><a href="twitter.com/adnama.lin">@adnama.lin</a></li>
+          </ul>
+        </section>
+      </article>
+      <article>
         <h2>Contact Form:</h2>
         <form name="contactform" action="form-to-email.php" method="post">
-          <div>
+          <div class="formfield">
             <label for='name'>Full Name:</label><br>
             <input type="text" name="name">
           </div>
-          <div>
+          <div class="formfield">
             <label for='email'>Your Email:</label><br>
             <input type="email" name="email">
           </div>
-          <div>
+          <div class="formfield">
             <label>Message</label><br>
             <textarea for='message' name="message" rows: 15 cols: 50></textarea>
           </div>
           <input type="submit" value="Send Form">
         </form>
-      <section>
-      </section>
+      </article>
     </main>
 
     <footer>
-      <a href="https://github.com/adnamalin"><img src="images/githubicon.png" alt="github icon"></a>
-      <a href="https://www.linkedin.com/in/adnamalin"><img src="images/linkedinicon.png" alt="linkedin icon icon"></a>
-      <a href="https://www.instagram.com/adnama.lin/"><img src="images/instagramicon.png" alt="instagram icon"></a>
-      <a href="https://www.facebook.com/adnama.lin"><img src="images/facebookicon.png" alt="facebook icon"></a>
+      <a href="https://github.com/adnamalin"><img class="socialicon" src="images/githubicon.png" alt="github icon"></a>
+      <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="images/linkedinicon.png" alt="linkedin icon icon"></a>
+      <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="images/instagramicon.png" alt="instagram icon"></a>
+      <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="images/facebookicon.png" alt="facebook icon"></a>
     </footer>
   </body>
 </html>
