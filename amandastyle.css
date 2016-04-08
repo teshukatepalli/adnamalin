@@ -180,6 +180,17 @@ footer {
 }
 
 /**********Responsive***********/
+@media screen and (max-width: 550px) {
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: .8em;
+  }
+
+}
 
 @media screen and (max-width: 946px) {
 
