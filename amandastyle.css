@@ -170,6 +170,10 @@ footer {
   margin: 5px 0;
 }
 
+.formfield label{
+  font-style: italic;
+}
+
 #contactmain li a{
   color: #000000;
   font-weight: bold;
