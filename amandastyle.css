@@ -106,21 +106,16 @@ main article {
   text-align: center;
 }
 
-/*#indexmain {
-  margin: -20px;
-}*/
 
 #indexarticle {
   padding: 20px 20px;
 }
 
 /**********Footer***********/
-
 footer {
-  margin-right: auto;
-  margin-left: auto;
-  width: 15%;
-  /*text-align: center;*/
+  height: 44px;
+  width: 200px;
+  margin: 20px auto 0;
 }
 
 .socialicon {
@@ -139,7 +134,7 @@ footer {
   padding-left: .5%;}
 
 #aboutmain {
-    width: 756px;
+    width: 820px;
     display: inline-block;
     vertical-align: top;
     margin-top: -10px;
@@ -148,4 +143,34 @@ footer {
 .profilepic {
   border-radius: 100%;
   max-width: 30%;
+}
+
+/**********Contact Page***********/
+
+#contactmain {
+    width: 820px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: -10px;
+    text-align: center;
+  }
+
+  #contactmain ul{
+    list-style: none;
+  }
+
+  #contactmain ul li{
+    display: inline-block;
+    vertical-align: top;
+    max-width: 30%;
+    /*padding-right: 5px;*/
+  }
+
+.formfield {
+  margin: 5px 0;
+}
+
+#contactmain li a{
+  color: #000000;
+  font-weight: bold;
 }
