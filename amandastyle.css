@@ -277,6 +277,13 @@ tr:hover {
     margin: 0 auto;
   }
 
+  #contactmain ul li{
+    display: block;
+    max-width:inherit;
+    margin: 0 auto;
+    /*padding-right: 5px;*/
+  }
+
 /*Mobile Iphone 6]*/
 
 @media only screen
