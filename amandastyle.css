@@ -148,6 +148,25 @@ footer {
   margin-right: 10px;
 }
 
+#FavTable {
+  display: block;
+  width: 270px;
+  margin: 0 auto;
+}
+
+th, td {
+  border-bottom: 1px dotted #FF712C;
+}
+
+th {
+  background-color: lightgray;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: lightgray;
+}
+
 /**********Contact Page***********/
 
 #contactmain {
