@@ -24,3 +24,6 @@ Enjoy my first little website!
 * A few elements styled using a class (x)
 * A different color for visited links (x)
 * An element styled with an ID (x)
+
+* Responsive layout for desktop & mobile (x)
+* Favicon (x)
