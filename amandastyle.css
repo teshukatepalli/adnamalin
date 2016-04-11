@@ -220,7 +220,7 @@ tr:hover {
 
 }
 
-@media screen and (max-width: 946px) {
+@media screen and (max-width: 1090px) {
 
   .mainimage {
     max-width: 100%;
@@ -255,6 +255,26 @@ tr:hover {
     background: rgba(161, 232, 217, 0.5);
     font-size: .8em;
     text-align: center;
+  }
+
+  #sidenav {
+    display: block;
+    width:inherit;
+    text-align: center;
+    padding: 0;
+    margin: 0 0 10px;
+  }
+
+  #aboutmain {
+    display: block;
+    width: inherit;
+    margin: 0 auto;
+  }
+
+  #contactmain {
+    display: block;
+    width: inherit;
+    margin: 0 auto;
   }
 
 /*Mobile Iphone 6]*/
@@ -304,12 +324,12 @@ and (max-device-width : 667px) {
 
   #sidenav {
     display: block;
-    width: 353px;
+    width: inherit;
   }
 
   #aboutmain {
       display: block;
-      width: 375px;
+      width: inherit;
   }
 
   .profilepic {
@@ -321,7 +341,7 @@ and (max-device-width : 667px) {
   }
 
   #contactmain {
-      width: 375px;
+      width: inherit;
       display: block;
       margin: 0 auto;
   }
