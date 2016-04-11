@@ -87,7 +87,7 @@ nav {
 }
 
 nav a:visited {
-  color: #ffffff;
+  color: lightgray;
 }
 
 nav a:hover {
