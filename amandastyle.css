@@ -304,20 +304,38 @@ and (max-device-width : 667px) {
 
   #sidenav {
     display: block;
-    width: 375px;
+    width: 353px;
   }
 
   #aboutmain {
       display: block;
       width: 375px;
-    }
+  }
 
-    .profilepic {
+  .profilepic {
       border-radius: 100%;
       max-width: 80px;
       display: inline-block;
       vertical-align: top;
       margin-right: 6px;
-    }
+  }
+
+  #contactmain {
+      width: 375px;
+      display: block;
+      margin: 0 auto;
+  }
+
+  #contactmain ul li{
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      /*padding-right: 5px;*/
+  }
+
+  .formfield {
+    margin: 0 0;
+  }
+
 
 }
