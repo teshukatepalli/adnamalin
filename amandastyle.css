@@ -20,8 +20,22 @@ h2{
 }
 
 .subpagebg {
-  background-image: url(images/backgroundpattern.png);
+  background-image: url(myphotos/backgroundpattern.png);
   background-repeat: repeat;
+}
+
+.buttons {
+    background-color: gray;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'raleway', sans-serif;
+    display: inline-block;
+    font-size: 14px;
 }
 
 /**********Heading Area***********/
@@ -31,16 +45,12 @@ h2{
   height: auto;
   width: auto;
   margin-bottom: 0;
-  margin-top: 0;
 }
 
 .headcontainer {
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
 }
 
 .whiteboxh1 {
@@ -106,13 +116,8 @@ nav a {
 }
 /**********Main Content***********/
 
-main article {
-  text-align: center;
-}
-
-
 .articlespace {
-  padding: 20px 20px;
+  text-align: center;
 }
 
 /**********Footer***********/
@@ -144,6 +149,10 @@ footer {
     margin-top: -10px;
   }
 
+#aboutmain, h2,p {
+    text-align: center;
+}
+
 .profilepic {
   border-radius: 100%;
   max-width: 150px;
@@ -152,10 +161,17 @@ footer {
   margin-right: 10px;
 }
 
+
 #FavTable {
-  display: block;
+  display: none;
   width: 270px;
   margin: 0 auto;
+}
+
+#photos {
+    display: block;
+    width: 500px;
+    margin: 0 auto;
 }
 
 th, td {

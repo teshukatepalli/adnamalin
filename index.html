@@ -3,34 +3,42 @@
   <head>
     <meta charset="utf-8">
     <title>Amanda Lin</title>
+    <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="amandastyle.css">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script type="text/javascript" src="amandajquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
     <link rel="shortcut icon" href="faviconit/favicon.ico">
-  	<link rel="icon" sizes="16x16 32x32 64x64" href="faviconit/favicon.ico">
-  	<link rel="icon" type="image/png" sizes="196x196" href="faviconit/favicon-192.png">
-  	<link rel="icon" type="image/png" sizes="160x160" href="faviconit/favicon-160.png">
-  	<link rel="icon" type="image/png" sizes="96x96" href="faviconit/favicon-96.png">
-  	<link rel="icon" type="image/png" sizes="64x64" href="faviconit/favicon-64.png">
-  	<link rel="icon" type="image/png" sizes="32x32" href="faviconit/favicon-32.png">
-  	<link rel="icon" type="image/png" sizes="16x16" href="faviconit/favicon-16.png">
-  	<link rel="apple-touch-icon" href="faviconit/favicon-57.png">
-  	<link rel="apple-touch-icon" sizes="114x114" href="faviconit/favicon-114.png">
-  	<link rel="apple-touch-icon" sizes="72x72" href="faviconit/favicon-72.png">
-  	<link rel="apple-touch-icon" sizes="144x144" href="faviconit/favicon-144.png">
-  	<link rel="apple-touch-icon" sizes="60x60" href="faviconit/favicon-60.png">
-  	<link rel="apple-touch-icon" sizes="120x120" href="faviconit/favicon-120.png">
-  	<link rel="apple-touch-icon" sizes="76x76" href="faviconit/favicon-76.png">
-  	<link rel="apple-touch-icon" sizes="152x152" href="faviconit/favicon-152.png">
-  	<link rel="apple-touch-icon" sizes="180x180" href="faviconit/favicon-180.png">
-  	<meta name="msapplication-TileColor" content="#FFFFFF">
-  	<meta name="msapplication-TileImage" content="/favicon-144.png">
-  	<meta name="msapplication-config" content="/browserconfig.xml">
+    	<link rel="icon" sizes="16x16 32x32 64x64" href="faviconit/favicon.ico">
+    	<link rel="icon" type="image/png" sizes="196x196" href="faviconit/favicon-192.png">
+    	<link rel="icon" type="image/png" sizes="160x160" href="faviconit/favicon-160.png">
+    	<link rel="icon" type="image/png" sizes="96x96" href="faviconit/favicon-96.png">
+    	<link rel="icon" type="image/png" sizes="64x64" href="faviconit/favicon-64.png">
+    	<link rel="icon" type="image/png" sizes="32x32" href="faviconit/favicon-32.png">
+    	<link rel="icon" type="image/png" sizes="16x16" href="faviconit/favicon-16.png">
+    	<link rel="apple-touch-icon" href="faviconit/favicon-57.png">
+    	<link rel="apple-touch-icon" sizes="114x114" href="faviconit/favicon-114.png">
+    	<link rel="apple-touch-icon" sizes="72x72" href="faviconit/favicon-72.png">
+    	<link rel="apple-touch-icon" sizes="144x144" href="faviconit/favicon-144.png">
+    	<link rel="apple-touch-icon" sizes="60x60" href="faviconit/favicon-60.png">
+    	<link rel="apple-touch-icon" sizes="120x120" href="faviconit/favicon-120.png">
+    	<link rel="apple-touch-icon" sizes="76x76" href="faviconit/favicon-76.png">
+    	<link rel="apple-touch-icon" sizes="152x152" href="faviconit/favicon-152.png">
+    	<link rel="apple-touch-icon" sizes="180x180" href="faviconit/favicon-180.png">
+    	<meta name="msapplication-TileColor" content="#FFFFFF">
+    	<meta name="msapplication-TileImage" content="/favicon-144.png">
+    	<meta name="msapplication-config" content="/browserconfig.xml">
   </head>
   <body class="subpagebg">
       <div id="headcontainer">
-        <img class="mainimage" src="images/headerimage2.jpg" alt="heading image">
+        <img id="headerimage" class="mainimage" src="myphotos/headerimage2.jpg" alt="heading image">
         <div class="whiteboxh1">Amanda Lin &middot; Chicago, Il</div>
         <div class="whiteboxh2">dev bootcamp student</div>
       </div>
@@ -43,22 +51,23 @@
       </header>
 
       <main id="indexmain" role="main">
-      <article id="articlespace">
-        <section>
-          <h2>Introduction</h2>
-          <p>Hi! My name is Amanda Lin and this is my personal website. I am currently attending Dev Bootcamp in Chicago with the goal of refocusing my career to Software Development. I hope you enjoy my little site as I continue this journey!</p>
-        </section>
-
-        <section>
-          <h2>Dev Bootcamp</h2>
-          <p>Dev Bootcamp is a 19 week intensive training program for aspiring web developers, specializing in Ruby, Rails, HTML5, CSS, Test Driven Development, Object Oriented Javascript (AJAX, jQuery), Git and Source Control, Heroku, and Agile Development.</p>
-        </section>
-      </article>
+    <div id="accordion" class="articlespace">
+    <h3>Introduction</h3>
+        <div>
+            Hi! My name is Amanda Lin and this is my personal website. I am currently attending Dev Bootcamp in Chicago with the goal of refocusing my career to Software Development. I hope you enjoy my little site as I continue this journey!
+            <br><br>
+            The content on this site isn't great and doesn't make a lotta sense but mostly just there for me to be able to play around with different things. 
+        </div>
+     <h3>Dev Bootcamp</h3>
+        <div>
+            Dev Bootcamp is a 19 week intensive training program for aspiring web developers, specializing in Ruby, Rails, HTML5, CSS, Test Driven Development, Object Oriented Javascript (AJAX, jQuery), Git and Source Control, Heroku, and Agile Development.
+        </div>
+    </div>
       <footer>
-        <a href="https://github.com/adnamalin"><img class="socialicon" src="images/githubicon.png" alt="github icon"></a>
-        <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="images/linkedinicon.png" alt="linkedin icon icon"></a>
-        <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="images/instagramicon.png" alt="instagram icon"></a>
-        <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="images/facebookicon.png" alt="facebook icon"></a>
+        <a href="https://github.com/adnamalin"><img class="socialicon" src="myphotos/githubicon.png" alt="github icon"></a>
+        <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="myphotos/linkedinicon.png" alt="linkedin icon icon"></a>
+        <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="myphotos/instagramicon.png" alt="instagram icon"></a>
+        <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="myphotos/facebookicon.png" alt="facebook icon"></a>
       </footer>
     </main>
   </body>
