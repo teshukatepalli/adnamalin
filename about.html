@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>About Amanda</title>
+    <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="amandastyle.css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script type="text/javascript" src="amandajquery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery-ui.min.js"></script>
+    <!--Favicon-->
     <link rel="icon" sizes="16x16 32x32 64x64" href="faviconit/favicon.ico">
     <link rel="icon" type="image/png" sizes="196x196" href="faviconit/favicon-192.png">
     <link rel="icon" type="image/png" sizes="160x160" href="faviconit/favicon-160.png">
@@ -37,17 +45,18 @@
     </header>
     <main role="main" id="aboutmain">
       <h1 class="subpagetitle">About Me</h1>
-      <article id="articlespace">
         <section>
-          <img class="profilepic" src="images/AmandaLin-Cropped2.jpg" alt="Amanda Photo">
-          <img class="profilepic" src="images/AmandaLin-Cropped.png" alt="Amanda Photo">
-          <img class="profilepic" src="images/AmandaLin-Cropped3.jpg" alt="Amanda Photo">
+        <div id="photos">
+          <img id="img1" class="profilepic" src="myphotos/AmandaLin-Cropped2.jpg" alt="Amanda Photo">
+          <img id="img2" class="profilepic" src="myphotos/AmandaLin-Cropped.png" alt="Amanda Photo">
+          <img id="img3" class="profilepic" src="myphotos/AmandaLin-Cropped3.jpg" alt="Amanda Photo"></div>
           <h2>Hello There!</h2>
           <p>I'm Amanda Lin and here's a little bit about me. I am  Chinese-American and grew up in northeast Ohio. I attended Ohio State and recieved a double major degree in Strategic Communication and Internation Studies World Economy &amp; Business in 2015. During college I was actively invovled in my cultural sorority <a href="http://kappaphilambda.org">Kappa Phi Lambda</a> as well as other cultural organizations at OSU.
           <br><br>
           After college I moved to Chicago to start my first job as an Account Manager at Yelp. I have recently changed my career focus to software development and started attending Dev Bootcamp March 2016. And now you're pretty much caught up to where I am now!
           <br>
           </p>
+        <button id="Favorites" class="buttons">See Favorites</button>
           <div id="FavTable">
             <table>
               <tr>
@@ -76,13 +85,12 @@
             </table>
           </div>
         </section>
-      </article>
     </main>
     <footer>
-      <a href="https://github.com/adnamalin"><img class="socialicon" src="images/githubicon.png" alt="github icon"></a>
-      <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="images/linkedinicon.png" alt="linkedin icon icon"></a>
-      <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="images/instagramicon.png" alt="instagram icon"></a>
-      <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="images/facebookicon.png" alt="facebook icon"></a>
+      <a href="https://github.com/adnamalin"><img class="socialicon" src="myphotos/githubicon.png" alt="github icon"></a>
+      <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="myphotos/linkedinicon.png" alt="linkedin icon icon"></a>
+      <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="myphotos/instagramicon.png" alt="instagram icon"></a>
+      <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="myphotos/facebookicon.png" alt="facebook icon"></a>
     </footer>
   </body>
 </html>

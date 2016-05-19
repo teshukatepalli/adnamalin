@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Contact Amanda</title>
+    <!--Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+    <!--CSS-->
     <link rel="stylesheet" type="text/css" href="amandastyle.css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+    <script type="text/javascript" src="amandajquery.js"></script>
+    <link rel="stylesheet" href="jquery-ui.min.css">
+    <script src="jquery-ui.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicons -->
     <link rel="icon" sizes="16x16 32x32 64x64" href="faviconit/favicon.ico">
     <link rel="icon" type="image/png" sizes="196x196" href="faviconit/favicon-192.png">
     <link rel="icon" type="image/png" sizes="160x160" href="faviconit/favicon-160.png">
@@ -51,8 +59,8 @@
         </section>
       </article>
       <article class="articlespace">
-        <h2>Contact Form:</h2>
-        <form name="contactform" action="thanksform.html" method="post">
+        <h2 id="randomanimate">Contact Form:</h2>
+        <form name="contactform" action="thankyou.html" method="post">
           <div class ="formborder">
             <div class="formfield">
               <label>Full Name:</label><br>
@@ -64,19 +72,19 @@
             </div>
             <div class="formfield">
               <label>Message</label><br>
-              <textarea name="message" rows:"15" cols:"50"></textarea>
+              <textarea name="message" rows="3" cols="25"></textarea>
             </div>
-            <input class="formfield" type="submit" value="Send Form">
           </div>
+             <button class="buttons" type="submit">Submit!</button>
         </form>
       </article>
     </main>
 
     <footer>
-      <a href="https://github.com/adnamalin"><img class="socialicon" src="images/githubicon.png" alt="github icon"></a>
-      <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="images/linkedinicon.png" alt="linkedin icon icon"></a>
-      <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="images/instagramicon.png" alt="instagram icon"></a>
-      <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="images/facebookicon.png" alt="facebook icon"></a>
+      <a href="https://github.com/adnamalin"><img class="socialicon" src="myphotos/githubicon.png" alt="github icon"></a>
+      <a href="https://www.linkedin.com/in/adnamalin"><img class="socialicon" src="myphotos/linkedinicon.png" alt="linkedin icon icon"></a>
+      <a href="https://www.instagram.com/adnama.lin/"><img class="socialicon" src="myphotos/instagramicon.png" alt="instagram icon"></a>
+      <a href="https://www.facebook.com/adnama.lin"><img class="socialicon" src="myphotos/facebookicon.png" alt="facebook icon"></a>
     </footer>
   </body>
 </html>
