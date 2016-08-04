@@ -62,10 +62,11 @@ a.rpanel:hover{ color: #fff; }
 	height: 80px;
 	position: fixed;
 	margin-top: 0px;
+	opacity: 0.8;
 }
 
 #nav {
-	width: 410px;
+	width: 500px;
 	float: right;
 	margin-top: 20px;
 }
@@ -162,18 +163,27 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 /*= SLIDES STYLING
 --------------------------------------------------------*/
 
-#slide1, #slide2{ width: 100%; }
+#slide1, #slide2{
+	width: 100%;
+}
+
 #slide1{
-	background:url('../img/slide1.jpg') 50% 0 no-repeat fixed;
+	background:url('../img/slide1image.png') 50% 0 no-repeat fixed;
 	color: #fff;
-	height: 600px;
+	height: 400px;
 	margin: 0;
 	padding: 200px 0 260px 0;
-	background-size: cover;
+	/*background-size: cover;*/
+}
+
+.circle-photo {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
 }
 
 #slide2{
-	background-color: #fff;
+	background-color: grey;
 	color: #333333;
 	height: 300px;
 	margin: 0 auto;
@@ -190,19 +200,19 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide4{
-	background-color: #fff;
+	background-color: grey;
 	color: #333333;
 	height: 300px;
 	padding: 200px 0;
 }
 
 #slide5{
-	background: url(../img/slide5.jpg) 50% 0 no-repeat fixed;
-	height: 200px;
+	background-color: lightblue;
 	margin: 0 auto;
-	padding: 250px 0;
+	height: 150px;
+	/*padding: 250px 0;*/
 	color: #fff;
-	background-size: cover;
+	/*background-size: cover;*/
 }
 
 
