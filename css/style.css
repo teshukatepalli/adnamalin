@@ -13,8 +13,14 @@ body{
 	width: 100%;
 }
 
+p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-align: center;
+}
+
 h1 {
-	font-family:"Arvo";
+	font-family:"Roboto Slab", serif;
 	font-weight:normal;
 	font-size: 55px;
 	text-align: center;
@@ -24,7 +30,7 @@ h1 {
 }
 
 h2 {
-	font-family:"Arvo";
+	font-family:"Roboto Slab", serif;
 	font-weight: normal;
 	font-size: 40px;
 	text-align: center;
@@ -45,14 +51,15 @@ h3 {
 
 
 
-.center { margin: 0 auto; }
-.content{ margin: 0 auto; width: 960px; }
-.clear { clear: both; }
-a.lpanel { float: left; color: #e1e1e1; font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
-a.rpanel { float: right; color: #e1e1e1;  font-size: 12px; font-family:"Wellfleet"; text-decoration: none; margin: 7px 11px; }
+.center {
+	margin: 0 auto;
+}
 
-a.lpanel:hover{ color: #fff; }
-a.rpanel:hover{ color: #fff; }
+.content{
+	margin: 0 auto;
+	width: 960px;
+}
+
 /*= HEADER & NAVIGATION
 --------------------------------------------------------*/
 
@@ -94,23 +101,23 @@ a.rpanel:hover{ color: #fff; }
 	padding-left: 21px;
 }
 
-#nav li a {
+a {
 	color: #000;
 	opacity:0.6;
-	font-size: 16px;
+	font-size: 14px;
 	text-decoration: none;
-	font-family: 'Wellfleet';
+	font-family: 'Roboto', sans-serif;
 }
 
-#nav li a.active {
-	color: #red;
+a.active {
+	color: #5d88bd;
 	opacity:1;
 	border-bottom: 2px
 	solid #fff;
 }
 
-#nav li a:hover {
-	color: blue;
+a:hover {
+	color: #5d88bd;
 	opacity:1;
 }
 
@@ -126,14 +133,6 @@ a.rpanel:hover{ color: #fff; }
 	margin: 50px auto;
 }
 
-.author_name_white { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #fff; font-size: 20px; }
-.author_name_gray { font-family:"Wellfleet";  margin: 70px 0 0 75px; color: #94a4a4; font-size: 20px; }
-.quotes_container { width: 800px; margin: 0 auto; }
-#christmas_tree { background: url('../img/christmas-tree.png')no-repeat; width: 48px; height: 77px; margin: 0 auto; position: relative; bottom: -35px;}
-#divider { background: url('../img/divider.png')no-repeat; width: 300px; height: 35px; margin: 0px auto 27px auto; }
-#ribbon { background: url('../img/ribbon.png')no-repeat; width: 251px; height: 48px; margin: 0 auto;  display: block; position: relative; top: -38px; }
-#snowflakes1 { background: url('../img/snowflakes.png')no-repeat; width: 24px; height: 21px; margin: 0 auto;  display: block; position: relative; bottom: -54px; left: -102px; }
-#snowflakes2 { background: url('../img/snowflakes.png')no-repeat; width: 24px; height: 21px; margin: 0 auto;  display: block; position: relative; bottom: -33px;  right: -100px; }
 
 
 
@@ -168,7 +167,7 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide1{
-	background:url('../img/slide1image.png') 50% 0 no-repeat fixed;
+	background: url(../img/slide1image.png) 50% 0 no-repeat fixed;
 	color: #fff;
 	height: 400px;
 	margin: 0;
@@ -183,7 +182,7 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide2{
-	background-color: grey;
+	background: url(../img/blackpattern.png) repeat ;
 	color: #333333;
 	height: 300px;
 	margin: 0 auto;
@@ -192,7 +191,7 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide3{
-	background: url(../img/slide3.jpg) 50% 0 no-repeat fixed;
+	background: url(../img/slide2light.png) 50% 0 no-repeat fixed;
 	color: #fff;
 	height: 600px;
 	padding: 170px 0 0 0;
@@ -200,20 +199,52 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 }
 
 #slide4{
-	background-color: grey;
+	background: url(../img/cubes.png) repeat ;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 	color: #333333;
 	height: 300px;
-	padding: 200px 0;
+	padding: 250px 0;
 }
 
-#slide5{
+.coral-header {
+	color: #d36666;
+}
+
+#divider {
+	background: url('../img/divider.png')no-repeat;
+	width: 300px;
+	height: 35px;
+	margin: 8px 20px 0 15px;
+}
+
+#social-media {
+	display: flex;
+	justify-content: center;
+}
+
+#social-media > a > img {
+	width: 40px;
+	height: 40px;
+	margin: 7px 7px;
+}
+
+#credits > ul {
+	list-style: none;
+	text-align: center;
+	padding-left: 2px;
+}
+
+
+/*#slide5{
 	background-color: lightblue;
 	margin: 0 auto;
 	height: 150px;
 	/*padding: 250px 0;*/
-	color: #fff;
+	/*color: #fff;*/
 	/*background-size: cover;*/
-}
+/*}*/
 
 
 /*= FOOTER
