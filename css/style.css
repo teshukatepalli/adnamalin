@@ -179,6 +179,11 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 	/*background-size: cover;*/
 }
 
+.inprogress {
+	display: flex;
+	justify-content: center;
+}
+
 .circle-photo {
 	border-radius: 50%;
 	width: 150px;
