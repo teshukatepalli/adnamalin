@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+  // show at work on load
+  $(".atwork-content").show();
+
   $("a[href^='#']").each(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname
@@ -19,5 +23,12 @@ $(document).ready(function() {
       }
     }
   });
+
+  $("a[href^='at']").on("click", function(e){
+    e.preventDefault();
+    $(".about-text").hide();
+    var clickedLink = "." + $(this).attr('href');
+    $(clickedLink).fadeIn();
+  })
 
 });
