@@ -26,7 +26,7 @@ $(document).ready(function() {
 
   $("a[href^='at']").on("click", function(e){
     e.preventDefault();
-    $(".about-text").hide();
+    $(this).parent().siblings('div.center').children().hide();
     var clickedLink = "." + $(this).attr('href');
     $(clickedLink).fadeIn();
   })
