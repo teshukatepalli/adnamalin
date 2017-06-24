@@ -1,5 +1,7 @@
 import React from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { find } from 'lodash'
+import cx from 'classnames'
 import About from '../components/About.js'
 import Projects from '../components/Projects.js'
 import Connect from '../components/Connect.js'
@@ -7,15 +9,15 @@ import Connect from '../components/Connect.js'
 export default class Navigator extends React.Component {
 
   state = {
-    selectedKey: 'navigator'
+    selectedKey: 'about'
   }
 
   navigatorKey = () =>
     [
-      {key: 'navigator', render: this.renderNavigator()},
-      {key: 'about',     render: this.renderAbout()},
-      {key: 'projects',  render: this.renderProjects()},
-      {key: 'connect',   render: this.renderConnect()}
+      {key: 'navigator', render: this.renderNavigator(), background: 'background-1'},
+      {key: 'about', render: this.renderAbout(), background: 'background-2'},
+      {key: 'projects', render: this.renderProjects(), background: 'background-3'},
+      {key: 'connect', render: this.renderConnect(), background: 'background-4'}
     ]
 
   handleSelect = (selectedKey) => {
@@ -32,21 +34,33 @@ export default class Navigator extends React.Component {
     </div>
 
   renderAbout = () =>
-    <About />
+    <About className='background-2'/>
 
   renderProjects = () =>
-    <Projects />
+    <Projects className='background-3'/>
 
   renderConnect = () =>
-    <Connect />
+    <Connect className='background-4'/>
 
   render() {
+    const selecteKey = find(this.navigatorKey(), ['key', this.state.selectedKey])
     return (
-      <div>
-        {this.state.selectedKey !== 'navigator' &&
-          <div onClick={() => this.handleSelect('navigator')}>Back</div>
-        }
-        {find(this.navigatorKey(), ['key', this.state.selectedKey]).render}
+      <div className={cx('main', selecteKey.background)}>
+        <div className="container">
+          <div
+            className="title"
+            onClick={() => this.handleSelect('navigator')}>
+            {this.state.selectedKey !== 'navigator'? '< Back' : 'Amanda Lin · Software Developer'}
+          </div>
+          <ReactCSSTransitionGroup
+            transitionName="entry"
+            transitionAppear={false}
+            transitionEnter={true}
+            transitionLeave={false}
+            transitionEnterTimeout={500}>
+              <div className="content" key={selecteKey.key}>{selecteKey.render}</div>
+          </ ReactCSSTransitionGroup>
+        </div>
       </div>
     )
   }
