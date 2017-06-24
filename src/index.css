@@ -1,3 +1,7 @@
+@import './style/font.css';
+@import './style/App.css';
+@import './style/Navigator.scss';
+
 body {
   margin: 0;
   padding: 0;
