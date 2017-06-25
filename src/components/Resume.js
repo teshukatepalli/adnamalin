@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { find } from 'lodash'
-import { content, skills } from '../static/Resume-Content'
+import { content } from '../static/Resume-Content'
 
 export default class Resume extends React.Component {
 
