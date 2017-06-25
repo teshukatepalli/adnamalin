@@ -17,6 +17,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  transform: translateY(-50%);
   width: calc(100%/2.7);
   height: calc(100%/2.7);
 }
