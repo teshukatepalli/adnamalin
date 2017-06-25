@@ -1,18 +1,24 @@
+#root {
+  height: inherit;
+  width: inherit;
+}
+
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  overflow: auto;
+  height: inherit;
+  width: inherit;
 }
 
 .container {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  width: calc(100%/3);
+  width: calc(100%/2.7);
+  height: calc(100%/2.7);
 }
 
 .content {
@@ -20,6 +26,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: inherit;
+  height: inherit;
 }
 
 .last-modified {

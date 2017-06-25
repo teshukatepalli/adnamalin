@@ -4,13 +4,73 @@
 
 .Resume-list {
   display: flex;
+  padding-bottom: 1em;
 }
 
 .Resume-list > div {
-  margin-right: 2em; 
+  margin-right: 2em;
 }
 
-.Resume-skill-list {
-  font-family: 'input-mono-light', sans-serif;
-  font-size: .75em;
+.Resume-list > div:hover {
+  cursor: pointer;
+  color: #c15b15;
+}
+
+.selected {
+  color: #c15b15;
+}
+
+.Resume-skills {
+  font-family: inconsolata, sans-serif;
+  font-size: 1em;
+  display: flex;
+}
+.Resume-skills > div > div {
+  margin-right: 2em;
+  margin-bottom: .5em;
+}
+
+.Resume-toggle > img {
+  width: .7em;
+  height: .7em;
+  margin-right: 1em;
+  opacity: .5;
+}
+
+.Resume-toggle > img:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.Resume-education-item, .Resume-experience-item {
+  display: flex;
+  margin: 1em 0;
+}
+
+.Resume-education-right {
+  width: 100%
+}
+
+.Resume-education-header, .Resume-experience-header {
+  display: flex;
+}
+
+.Resume-education-main, .Resume-experience-main {
+  font-family: inconsolata, sans-serif;
+  font-size: .9em;
+  border-top: 1px solid #c9dae8;
+  margin-top: .5em;
+  padding-top: .5em;
+}
+
+.Resume-experience-main > div {
+  margin-bottom: .25em;
+}
+
+.Resume-experience-header{
+  flex-direction: column;
+}
+
+.Resume-experience-date {
+  font-size: .9em;
 }

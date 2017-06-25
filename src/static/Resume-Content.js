@@ -27,7 +27,7 @@ const yelp = {
 
 const dbcExperience = {
   company: 'Dev Bootcamp Chicago',
-  position: 'Full Stack Web Developement Student',
+  position: 'Student',
   dates: 'March 2016 - July 2016',
   bullets: ['Dev Bootcamp is a 19 week intensive training program specializing in Ruby, Rails, HTML5, CSS, Test Driven Development, Object-Oriented Javascript (AJAX and Jquery), Git and Source Control, Heroku and Agile Development', 'Engaged in daily pair programming and agile group projects with tight deadlines']
 }
@@ -66,7 +66,7 @@ const dbc = {
 }
 
 export const content = [
-  {key: 'skills', content: skills, template: 'skills'},
   {key: 'experience', content: [tcSoftwareEngineer, tcApprentice, mentor, dbcExperience, yelp], template: 'experience'},
+  {key: 'skills', content: skills, template: 'skills'},
   {key: 'education', content: [osu, dbc], template: 'education'},
 ]
