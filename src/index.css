@@ -1,6 +1,7 @@
 @import './style/font.css';
 @import './style/App.css';
 @import './style/Navigator.scss';
+@import './style/Project.css';
 
 body {
   margin: 0;
