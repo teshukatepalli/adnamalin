@@ -21,7 +21,7 @@ export default class Projects extends React.Component {
         <div className="tldr">
           <span className="red">tldr</span>; {currentContent.tldr}
         </div>
-        <div>{currentContent.text}</div>
+        <div className="Project-text">{currentContent.text}</div>
         <div className="Project-feature-title"> Features: </div>
         <ul className="Project-feature-list">
           {currentContent.features.map((feature) =>

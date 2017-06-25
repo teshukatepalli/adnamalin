@@ -3,6 +3,16 @@
     src: url('inputMono-Light.ttf');
 }
 
+@font-face {
+    font-family: 'inconsolata';
+    src: url('Inconsolata.otf');
+}
+
+@font-face {
+    font-family: 'roboto-medium';
+    src: url('Roboto-Medium.ttf');
+}
+
 .text {
   font-family: 'input-mono-light', sans-serif;
   font-size: .9em;

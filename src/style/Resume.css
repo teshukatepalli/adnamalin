@@ -1,0 +1,16 @@
+.Resume-container {
+  display: flex;
+}
+
+.Resume-list {
+  display: flex;
+}
+
+.Resume-list > div {
+  margin-right: 2em; 
+}
+
+.Resume-skill-list {
+  font-family: 'input-mono-light', sans-serif;
+  font-size: .75em;
+}
