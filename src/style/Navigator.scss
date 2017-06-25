@@ -32,7 +32,6 @@
   align-items: flex-start;
   flex-direction: column;
   list-style: none;
-  color: #e4e5e6;
   font-family: 'input-mono-light', sans-serif;
   font-size: 2em;
   text-align: left;
@@ -40,11 +39,11 @@
   padding: 0;
 }
 
-li {
+.Navigator-list > li {
   cursor: pointer;
 }
 
-li:hover {
+.Navigator-list > li:hover {
   color: #de935f;
 }
 
@@ -55,13 +54,6 @@ li:hover {
   font-size: 1em;
   margin-bottom: 1em;
   padding-bottom: .5em;
-  color: #b5bd68;
-}
-
-.text {
-  font-family: 'input-mono-light', sans-serif;
-  font-size: .9em;
-  margin: 0;
 }
 
 .entry-enter {

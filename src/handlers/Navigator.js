@@ -9,7 +9,7 @@ import Connect from '../components/Connect.js'
 export default class Navigator extends React.Component {
 
   state = {
-    selectedKey: 'about'
+    selectedKey: 'projects'
   }
 
   navigatorKey = () =>
@@ -26,7 +26,7 @@ export default class Navigator extends React.Component {
 
   renderNavigator = () =>
     <div className="Navigator-container">
-      <ul className="Navigator-list">
+      <ul className="Navigator-list gray">
         <li onClick={() => this.handleSelect('about')}>About</li>
         <li onClick={() => this.handleSelect('projects')}>Projects</li>
         <li onClick={() => this.handleSelect('connect')}>Connect</li>
@@ -48,7 +48,7 @@ export default class Navigator extends React.Component {
       <div className={cx('main', selecteKey.background)}>
         <div className="container">
           <div
-            className="title"
+            className="title green"
             onClick={() => this.handleSelect('navigator')}>
             {this.state.selectedKey !== 'navigator'? '< Back' : 'Amanda Lin · Software Developer'}
           </div>

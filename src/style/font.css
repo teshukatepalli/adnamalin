@@ -2,3 +2,29 @@
     font-family: 'input-mono-light';
     src: url('inputMono-Light.ttf');
 }
+
+.text {
+  font-family: 'input-mono-light', sans-serif;
+  font-size: .9em;
+  margin: 0;
+}
+
+.red {
+  color: #efacac;
+}
+
+.blue {
+  color: #81a2be;
+}
+
+.gray {
+  color: #e4e5e6;
+}
+
+.orange {
+  color: #de935f;
+}
+
+.green {
+  color: #b5bd68;
+}

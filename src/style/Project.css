@@ -1,0 +1,51 @@
+.Projects-container {
+  display: flex;
+}
+
+.Project-list {
+  border-right: 1px solid #f1f3f5;
+  padding-right: 1em;
+}
+
+.Project-list-item {
+  padding: .15em;
+  cursor: pointer;
+  font-size: .9em;
+}
+
+.Project-feature-title {
+  margin-top: .35em;
+  font-weight: bold;
+}
+
+.Project-feature-list {
+  margin: .5em 0;
+}
+
+.Project-Icons {
+  padding-left: 1em;
+}
+
+.Project-Icons > a > img {
+  height: 1.5em;
+  width: 1.5em;
+  margin-bottom: .5em;
+  opacity: .5;
+}
+
+.Project-Icons > a > img:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.tldr {
+  font-style: italic;
+  font-size: .9em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #d5e4ef;
+}
+
+.Project-content {
+  padding-left: 1em;
+}
