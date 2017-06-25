@@ -1,7 +1,9 @@
 @import './style/font.css';
 @import './style/App.css';
-@import './style/Navigator.scss';
+@import './style/Navigator.css';
 @import './style/Project.css';
+@import './style/About.css';
+@import './style/Connect.css';
 
 body {
   margin: 0;
