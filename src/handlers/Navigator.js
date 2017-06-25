@@ -9,7 +9,7 @@ import Connect from '../components/Connect.js'
 export default class Navigator extends React.Component {
 
   state = {
-    selectedKey: 'projects'
+    selectedKey: 'navigator'
   }
 
   navigatorKey = () =>
