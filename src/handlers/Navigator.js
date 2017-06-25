@@ -3,6 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { find } from 'lodash'
 import cx from 'classnames'
 import About from '../components/About.js'
+import Resume from '../components/Resume.js'
 import Projects from '../components/Projects.js'
 import Connect from '../components/Connect.js'
 
@@ -15,9 +16,10 @@ export default class Navigator extends React.Component {
   navigatorKey = () =>
     [
       {key: 'navigator', render: this.renderNavigator(), background: 'background-1'},
-      {key: 'about', render: this.renderAbout(), background: 'background-2'},
+      {key: 'about', render: this.renderAbout(), background: 'background-5'},
+      {key: 'resume', render: this.renderResume(), background: 'background-4'},
       {key: 'projects', render: this.renderProjects(), background: 'background-3'},
-      {key: 'connect', render: this.renderConnect(), background: 'background-4'}
+      {key: 'connect', render: this.renderConnect(), background: 'background-2'}
     ]
 
   handleSelect = (selectedKey) => {
@@ -28,29 +30,34 @@ export default class Navigator extends React.Component {
     <div className="Navigator-container">
       <ul className="Navigator-list gray">
         <li onClick={() => this.handleSelect('about')}>About</li>
+        <li onClick={() => this.handleSelect('resume')}>Resume</li>
         <li onClick={() => this.handleSelect('projects')}>Projects</li>
         <li onClick={() => this.handleSelect('connect')}>Connect</li>
       </ul>
     </div>
 
   renderAbout = () =>
-    <About className='background-2'/>
+    <About/>
 
   renderProjects = () =>
-    <Projects className='background-3'/>
+    <Projects />
 
   renderConnect = () =>
-    <Connect className='background-4'/>
+    <Connect />
+
+  renderResume = () =>
+    <Resume />
 
   render() {
-    const selecteKey = find(this.navigatorKey(), ['key', this.state.selectedKey])
+    const selectedKey = find(this.navigatorKey(), ['key', this.state.selectedKey])
+    const isNav = this.state.selectedKey === 'navigator'
     return (
-      <div className={cx('main', selecteKey.background)}>
+      <div className={cx('main', selectedKey.background)}>
         <div className="container">
           <div
-            className="title green"
+            className={cx('title green', {back: !isNav})}
             onClick={() => this.handleSelect('navigator')}>
-            {this.state.selectedKey !== 'navigator'? '< Back' : 'Amanda Lin · Software Developer'}
+            {isNav ? 'Amanda Lin · Software Developer' : '< Back'}
           </div>
           <ReactCSSTransitionGroup
             transitionName="entry"
@@ -58,8 +65,9 @@ export default class Navigator extends React.Component {
             transitionEnter={true}
             transitionLeave={false}
             transitionEnterTimeout={500}>
-              <div className="content" key={selecteKey.key}>{selecteKey.render}</div>
-          </ ReactCSSTransitionGroup>
+              <div className="content" key={selectedKey.key}>{selectedKey.render}</div>
+          </ReactCSSTransitionGroup>
+          {selectedKey.key !== 'navigator' && <div className="last-modified gray text">Last Updated: {document.lastModified}</div>}
         </div>
       </div>
     )

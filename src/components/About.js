@@ -2,10 +2,16 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="text">
-      Raw denim food truck unicorn franzen paleo leggings nisi in normcore health goth vinyl. Ennui hell of tattooed DIY activated charcoal man braid biodiesel. Venmo dolore four dollar toast ramps. Four dollar toast photo booth pour-over, nisi kale chips quinoa bicycle rights bitters culpa adipisicing health goth swag intelligentsia blue bottle pork belly.
-      <br /><br />
-      Readymade tilde post-ironic chambray. Hammock cornhole drinking vinegar, four loko readymade sunt adipisicing tousled man braid poke celiac unicorn.
+    <div className="About-container">
+      <img
+        src={require('../assets/amanda.png')}
+        className="About-image"
+        alt="amanda"/>
+      <div className="text">
+        When I'm not thinking about what to build next, there's a 99% chance I'm thinking about what I'm going to eat next. I love food and learning about food culture. In my free time you'll find me binging documentaries on netflix and chilling with my pup Ein aka Einstein.
+        <br /><br />
+        I'm Ohio born and raised but currently living in Chicago. While I'm midwestern at heart, I am eager to move to the LA area and eventually live & work abroad.
+      </div>
     </div>
   )
 }
