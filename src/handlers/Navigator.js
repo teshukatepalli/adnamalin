@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import { find } from 'lodash'
 import cx from 'classnames'
 import About from '../components/About.js'

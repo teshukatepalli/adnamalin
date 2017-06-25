@@ -4,6 +4,7 @@
 @import './style/Project.css';
 @import './style/About.css';
 @import './style/Connect.css';
+@import './style/Resume.css';
 
 body {
   margin: 0;

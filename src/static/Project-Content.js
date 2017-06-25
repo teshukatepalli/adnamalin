@@ -2,7 +2,7 @@ export const content = [
   {
     key: 'kinder',
     display: 'Kinder',
-    text: 'DBC Capstone project. Kinder was created to address two problems plaguing moms: an alternative solution to manage their playdates & finding other moms they connect with beyond the commonality of having children. We designed Kinder with mobile in mind and had 88% test coverage.',
+    text: 'DBC Capstone project. Kinder was created to address two problems plaguing moms: an alternative solution to manage their playdates & finding other moms they connect with beyond the commonality of having children. We designed Kinder with mobile in mind.',
     features: ['Google sign-in, calendar, & maps integration', 'Live messaging', 'Swipe to connect', 'Playdate scheduling',],
     tldr: 'Tinder for Playdates · 7 days · Agile · Ruby on Rails 5 · JS/JQuery · Materialize · Travis CI',
     url: 'http://kinderplaydate.herokuapp.com',
