@@ -57,3 +57,40 @@
 .Project-content {
   padding-left: 1em;
 }
+
+@media screen and (max-width: 768px) {
+  .Projects-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Project-list {
+    display: flex;
+    padding: 0;
+    margin-bottom: 1.5em;
+    width: 100%;
+  }
+
+  .Project-list-item {
+    padding-right: 1em;
+  }
+
+  .Project-content {
+    padding: 0;
+  }
+
+  .tldr {
+    border-bottom: none;
+  }
+
+  .Project-Icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+  }
+
+  .Project-Icons > a > img {
+    margin-right: 1.5em;
+  }
+}

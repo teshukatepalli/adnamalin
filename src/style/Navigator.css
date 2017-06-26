@@ -84,6 +84,30 @@
   transition: opacity 500ms ease-in;
 }
 
+@media screen and (max-width: 769px) {
+  .background-position {
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: top;
+  }
+
+  .container {
+    width: calc(100%/1.5);
+    height: calc(100%);
+    transform: translateY(30%);
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 414px) and (min-width: 375px){
+  .container {
+    width: calc(80%);
+    height: calc(90%);
+    transform: translateY(15%);
+    padding: 1em;
+  }
+}
+
 .background-1 {
   background-image: url('../assets/1.png');
 }

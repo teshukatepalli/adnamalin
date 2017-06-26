@@ -52,7 +52,7 @@ export default class Navigator extends React.Component {
     const selectedKey = find(this.navigatorKey(), ['key', this.state.selectedKey])
     const isNav = this.state.selectedKey === 'navigator'
     return (
-      <div className={cx('main', selectedKey.background)}>
+      <div className={cx('main background-position', selectedKey.background)}>
         <div className="container">
           <div
             className={cx('title green', {back: !isNav})}
