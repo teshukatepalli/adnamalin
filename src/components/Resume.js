@@ -7,7 +7,8 @@ import { content } from '../static/Resume-Content'
 export default class Resume extends React.Component {
 
   state = {
-    contentKey: 'experience'
+    contentKey: 'experience',
+    allOpen: false
   }
 
   handleSelect(selectedKey) {
@@ -42,20 +43,24 @@ export default class Resume extends React.Component {
       }
     </div>
 
-  renderToggleAll = () =>
+  handleToggleAll(content) {
+    content.forEach((item) =>
+      this.setState({[item]: !this.state.allOpen})
+    )
+    this.setState({allOpen: !this.state.allOpen})
+  }
+
+  renderToggleAll = (content) =>
     <div
       className="Resume-toggle-all-container"
-      onClick={() => {this.handleClick('all')}}>
-      {this.state['all'] === true ?
-        <div className="text">
-          <img className="Resume-toggle-all" src={require('../assets/139-shrink.png')} alt=""/>
-          All
-        </div>:
-        <div className="text">
+      onClick={() => {this.handleToggleAll(content)}}>
+      <div className="text">
+        {this.state.allOpen === true ?
+          <img className="Resume-toggle-all" src={require('../assets/139-shrink.png')} alt=""/> :
           <img className="Resume-toggle-all" src={require('../assets/138-enlarge.png')} alt=""/>
-          All
-        </div>
-      }
+        }
+        All
+      </div>
     </div>
 
   renderSkills = (content) => {
@@ -82,10 +87,10 @@ export default class Resume extends React.Component {
   }
 
   renderExperience = (content) => {
-    const allOpen = this.state.all === true
+    const mapKeys = content.map((item) => item.position)
     return (
       <div>
-        {this.renderToggleAll()}
+        {this.renderToggleAll(mapKeys)}
         {
           content.map((experience) =>
             <div key={experience.position} className="Resume-experience-item">
@@ -95,7 +100,7 @@ export default class Resume extends React.Component {
                   <div>{experience.position} · {experience.company}</div>
                   <div className="Resume-experience-date">{experience.dates}</div>
                 </div>
-                { (this.state[experience.position] === true || allOpen) &&
+                { (this.state[experience.position] === true) &&
                   <div className="Resume-experience-main">
                     {
                       experience.bullets.map((bullet) =>
@@ -113,10 +118,10 @@ export default class Resume extends React.Component {
   }
 
   renderEducation = (content) => {
-    const allOpen = this.state.all === true
+    const mapKeys = content.map((item) => item.name)
     return (
       <div>
-        {this.renderToggleAll()}
+        {this.renderToggleAll(mapKeys)}
         {
           content.map((education) =>
             <div key={education.name} className="Resume-education-item">
@@ -125,7 +130,7 @@ export default class Resume extends React.Component {
                 <div className="Resume-education-header text">
                   <div>{education.name} · {education.dates}</div>
                 </div>
-                { (this.state[education.name] === true || allOpen) &&
+                { (this.state[education.name] === true) &&
                   <div key={education.name} className="Resume-education-main">
                     {
                       education.content.map((bullet) =>
