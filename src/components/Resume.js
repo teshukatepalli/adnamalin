@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { find } from 'lodash'
+import cx from 'classnames'
 import { content } from '../static/Resume-Content'
 
 export default class Resume extends React.Component {
 
   state = {
-    contentKey: 'skills'
+    contentKey: 'experience'
   }
 
   handleSelect(selectedKey) {
@@ -18,6 +19,7 @@ export default class Resume extends React.Component {
       {
         content.map((option) =>
           <div
+            className={cx({selected: this.state.contentKey === option.key})}
             onClick={() => this.handleSelect(option.key)}
             key={option.key}>
             {option.key}
@@ -26,30 +28,62 @@ export default class Resume extends React.Component {
       }
     </div>
 
-  renderSkills = (content) =>
-    <div>
-      {
-        content.map((skill) =>
-          <div key={skill}>{skill}</div>
-        )
+  handleClick(selected) {
+    this.setState({[selected]: !this.state[selected]})
+  }
+
+  renderToggle = (entity) =>
+    <div
+      className="Resume-toggle"
+      onClick={() => {this.handleClick(entity)}}>
+      {this.state[entity] === true ?
+        <img src={require('../assets/141-shrink2.png')} alt=""/> :
+        <img src={require('../assets/140-enlarge2.png')} alt=""/>
       }
     </div>
+
+  renderSkills = (content) => {
+    const group1 = content.slice(0, content.length/2)
+    const group2 = content.slice(content.length/2, content.length -1)
+    return (
+      <div className="Resume-skills">
+        <div>
+          {
+            group1.map((skill) =>
+              <div key={skill}>·{skill}</div>
+            )
+          }
+        </div>
+        <div>
+          {
+            group2.map((skill) =>
+              <div key={skill}>·{skill}</div>
+            )
+          }
+        </div>
+      </div>
+    )
+  }
 
   renderExperience = (content) =>
     <div>
       {
         content.map((experience) =>
-          <div key={experience.position}>
+          <div key={experience.position} className="Resume-experience-item">
+            {this.renderToggle(experience.position)}
             <div>
-              <span>{experience.company}</span>
-              <span>{experience.position}</span>
-            </div>
-            <div>{experience.dates}</div>
-            <div>
-              {
-                experience.bullets.map((bullet) =>
-                  <div key={bullet}>{bullet}</div>
-                )
+              <div className="Resume-experience-header text">
+                <div>{experience.position} · {experience.company}</div>
+                <div className="Resume-experience-date">{experience.dates}</div>
+              </div>
+              { this.state[experience.position] === true &&
+                <div className="Resume-experience-main">
+                  {
+                    experience.bullets.map((bullet) =>
+                      <div key={bullet}>· {bullet}</div>
+                    )
+                  }
+                </div>
               }
             </div>
           </div>
@@ -61,14 +95,22 @@ export default class Resume extends React.Component {
     <div>
       {
         content.map((education) =>
-          <div key={education.name}>
-            <div>{education.name}</div>
-            <div>{education.dates}</div>
-            {
-              education.content.map((bullet) =>
-                <div>{bullet}</div>
-              )
-            }
+          <div key={education.name} className="Resume-education-item">
+            {this.renderToggle(education.name)}
+            <div className="Resume-education-right">
+              <div className="Resume-education-header text">
+                <div>{education.name} · {education.dates}</div>
+              </div>
+              { this.state[education.name] === true &&
+                <div key={education.name} className="Resume-education-main">
+                  {
+                    education.content.map((bullet) =>
+                      <div key={bullet}>{bullet}</div>
+                    )
+                  }
+                </div>
+              }
+            </div>
           </div>
         )
       }

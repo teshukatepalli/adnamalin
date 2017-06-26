@@ -1,18 +1,25 @@
+#root {
+  height: inherit;
+  width: inherit;
+}
+
 .main {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  overflow: auto;
+  height: inherit;
+  width: inherit;
 }
 
 .container {
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
-  width: calc(100%/3);
+  transform: translateY(-50%);
+  width: calc(100%/2.7);
+  height: calc(100%/2.7);
 }
 
 .content {
@@ -20,6 +27,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: inherit;
+  height: inherit;
 }
 
 .last-modified {
@@ -73,6 +82,30 @@
 .entry-enter.entry-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
+}
+
+@media screen and (max-width: 769px) {
+  .background-position {
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: top;
+  }
+
+  .container {
+    width: calc(100%/1.5);
+    height: calc(100%);
+    transform: translateY(30%);
+    overflow: auto;
+  }
+}
+
+@media screen and (max-width: 414px) and (min-width: 375px){
+  .container {
+    width: calc(80%);
+    height: calc(90%);
+    transform: translateY(15%);
+    padding: 1em;
+  }
 }
 
 .background-1 {
