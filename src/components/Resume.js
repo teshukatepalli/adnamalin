@@ -37,8 +37,24 @@ export default class Resume extends React.Component {
       className="Resume-toggle"
       onClick={() => {this.handleClick(entity)}}>
       {this.state[entity] === true ?
-        <img src={require('../assets/141-shrink2.png')} alt=""/> :
-        <img src={require('../assets/140-enlarge2.png')} alt=""/>
+        <img className="Resume-img" src={require('../assets/141-shrink2.png')} alt=""/> :
+        <img className="Resume-img" src={require('../assets/140-enlarge2.png')} alt=""/>
+      }
+    </div>
+
+  renderToggleAll = () =>
+    <div
+      className="Resume-toggle-all-container"
+      onClick={() => {this.handleClick('all')}}>
+      {this.state['all'] === true ?
+        <div className="text">
+          <img className="Resume-toggle-all" src={require('../assets/139-shrink.png')} alt=""/>
+          All
+        </div>:
+        <div className="text">
+          <img className="Resume-toggle-all" src={require('../assets/138-enlarge.png')} alt=""/>
+          All
+        </div>
       }
     </div>
 
@@ -65,56 +81,66 @@ export default class Resume extends React.Component {
     )
   }
 
-  renderExperience = (content) =>
-    <div>
-      {
-        content.map((experience) =>
-          <div key={experience.position} className="Resume-experience-item">
-            {this.renderToggle(experience.position)}
-            <div>
-              <div className="Resume-experience-header text">
-                <div>{experience.position} · {experience.company}</div>
-                <div className="Resume-experience-date">{experience.dates}</div>
-              </div>
-              { this.state[experience.position] === true &&
-                <div className="Resume-experience-main">
-                  {
-                    experience.bullets.map((bullet) =>
-                      <div key={bullet}>· {bullet}</div>
-                    )
-                  }
+  renderExperience = (content) => {
+    const allOpen = this.state.all === true
+    return (
+      <div>
+        {this.renderToggleAll()}
+        {
+          content.map((experience) =>
+            <div key={experience.position} className="Resume-experience-item">
+              {this.renderToggle(experience.position)}
+              <div>
+                <div className="Resume-experience-header text">
+                  <div>{experience.position} · {experience.company}</div>
+                  <div className="Resume-experience-date">{experience.dates}</div>
                 </div>
-              }
+                { (this.state[experience.position] === true || allOpen) &&
+                  <div className="Resume-experience-main">
+                    {
+                      experience.bullets.map((bullet) =>
+                        <div key={bullet}>· {bullet}</div>
+                      )
+                    }
+                  </div>
+                }
+              </div>
             </div>
-          </div>
-        )
-      }
-    </div>
+          )
+        }
+      </div>
+    )
+  }
 
-  renderEducation = (content) =>
-    <div>
-      {
-        content.map((education) =>
-          <div key={education.name} className="Resume-education-item">
-            {this.renderToggle(education.name)}
-            <div className="Resume-education-right">
-              <div className="Resume-education-header text">
-                <div>{education.name} · {education.dates}</div>
-              </div>
-              { this.state[education.name] === true &&
-                <div key={education.name} className="Resume-education-main">
-                  {
-                    education.content.map((bullet) =>
-                      <div key={bullet}>{bullet}</div>
-                    )
-                  }
+  renderEducation = (content) => {
+    const allOpen = this.state.all === true
+    return (
+      <div>
+        {this.renderToggleAll()}
+        {
+          content.map((education) =>
+            <div key={education.name} className="Resume-education-item">
+              {this.renderToggle(education.name)}
+              <div className="Resume-education-right">
+                <div className="Resume-education-header text">
+                  <div>{education.name} · {education.dates}</div>
                 </div>
-              }
+                { (this.state[education.name] === true || allOpen) &&
+                  <div key={education.name} className="Resume-education-main">
+                    {
+                      education.content.map((bullet) =>
+                        <div key={bullet}>{bullet}</div>
+                      )
+                    }
+                  </div>
+                }
+              </div>
             </div>
-          </div>
-        )
-      }
-    </div>
+          )
+        }
+      </div>
+    )
+  }
 
   renderResumeContent = () => {
     const currentContent = find(content, ['key', this.state.contentKey])
