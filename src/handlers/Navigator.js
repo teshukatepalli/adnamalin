@@ -10,7 +10,7 @@ import Connect from '../components/Connect.js'
 export default class Navigator extends React.Component {
 
   state = {
-    selectedKey: 'navigator'
+    selectedKey: 'resume'
   }
 
   navigatorKey = () =>

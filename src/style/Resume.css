@@ -30,14 +30,29 @@
   margin-bottom: .5em;
 }
 
-.Resume-toggle > img {
+.Resume-img {
   width: .7em;
   height: .7em;
   margin-right: 1em;
   opacity: .5;
 }
 
-.Resume-toggle > img:hover {
+.Resume-toggle-all-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: .5;
+  font-size: .9em;
+}
+
+.Resume-toggle-all {
+  width: 1em;
+  height: 1em;
+  margin-right: 1em;
+  opacity: .5;
+}
+
+.Resume-img:hover, .Resume-toggle-all:hover {
   opacity: 1;
   cursor: pointer;
 }
