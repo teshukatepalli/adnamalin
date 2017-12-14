@@ -50,7 +50,7 @@ const tcSoftwareEngineer = {
   company: 'Trunk Club',
   position: 'Software Engineer I',
   dates: 'April 2017 - Present',
-  bullets: ['Assisting in re-architecting product data ingestion pipeline from entry point to consuming downstream application', 'Using React to revamp internal shopping platform', 'Contributed to increasing data ingestion success rates from 67% to 95%', 'Actively a part of On Call Engineer rotations']
+  bullets: ['Assisting in re-architecting product data ingestion pipeline from entry point to consuming downstream application', 'Using React to revamp internal shopping platform', 'Contributed to increasing data ingestion success rates from 70% to 91%', 'Actively a part of On Call Engineer rotations']
 }
 
 const osu = {
