@@ -1,21 +1,22 @@
 export const skills = [
   'Ruby',
-  'Ruby on Rails',
-  'Sinatra',
   'Javascript/ES6',
   'React',
-  'SQL/PostgreSQL',
+  'Sinatra',
+  'Ruby on Rails',
   'RSpec',
-  'Test Driven Development',
-  'Agile',
+  'Jest',
+  'Enzyme',
+  'SQL/PostgreSQL Kafka',
+  'Splunk',
+  'Sidekiq Elasticsearch AWS',
+  'Heroku CircleCI Git',
+  'New Relic',
+  'Microservices Architecture ',
+  'Agile Development ',
+  'Continuous Integration ',
   'Pair Programming',
-  'Git',
-  'Continuous Integration',
-  'HTML/CSS',
-  'Materialize/Bootstrap',
-  'Salesforce',
-  'Photoshop/Illustrator',
-  'Google Analytics'
+  'Test Driven Development'
 ]
 
 const yelp = {
@@ -48,9 +49,18 @@ const tcApprentice = {
 
 const tcSoftwareEngineer = {
   company: 'Trunk Club',
-  position: 'Software Engineer I',
-  dates: 'April 2017 - Present',
-  bullets: ['Assisting in re-architecting product data ingestion pipeline from entry point to consuming downstream application', 'Using React to revamp internal shopping platform', 'Contributed to increasing data ingestion success rates from 70% to 91%', 'Actively a part of On Call Engineer rotations']
+  position: 'Software Engineer I & II',
+  dates: 'April 2017 - January 2018, February 2018 - Present',
+  bullets: [
+    'Full stack engineer on Merchandising Team focused on product data integrations with Nordstrom, inventory management, and custom shopping platform for stylists',
+    'Experienced in scoping, architecting, and executing projects independently while coordinating with stakeholders, design, product, QA, and data science directly',
+    'Oversaw and executed new product data integration with Nordstrom with extensive parallel testing which improved and simplified our core business responsibility with measurable gains in unlocking 200k+ products and counting',
+    'Planned and rolled out new size mapping flow with less than 1% error rate in backwards compatibility which allowed our stakeholders to actively bring in missed and new products with reporting and visibility',
+    'Contributed to increasing data ingestion success rates from 67% to 95%,Assisting in overhaul of React shopping platform while balancing high risk greenfield work with deliverables on existing application to meet business needs',
+    'Coordinating with Data Science to build features utilizing multiple models',
+    'Collaborated in improving back end engineering interviews',
+    'Actively a part of On Call rotations for team and general engineering'
+  ]
 }
 
 const osu = {
