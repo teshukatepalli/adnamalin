@@ -27,6 +27,9 @@ export default class Resume extends React.Component {
           </div>
         )
       }
+      <div>
+        <a href="https://goo.gl/hjyhtp" target="_blank">resume pdf</a>
+      </div>
     </div>
 
   handleClick(selected) {

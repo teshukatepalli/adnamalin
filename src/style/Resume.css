@@ -7,6 +7,15 @@
   padding-bottom: 1em;
 }
 
+.Resume-list > div > a {
+  text-decoration: none;
+  color: #de935f;
+}
+
+.Resume-list > div > a:hover {
+  color: #c15b15;
+}
+
 .Resume-list > div {
   margin-right: 2em;
 }
